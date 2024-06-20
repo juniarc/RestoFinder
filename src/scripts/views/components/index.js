@@ -1,5 +1,3 @@
-import './base/litWithoutShadowDOM';
-
 import './resto-item';
 import './resto-list';
 import './resto-detail';

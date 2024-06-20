@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import LitWithoutShadowDom from '../base/LitWithoutShadowDom';
+import LitWithoutShadowDom from '../base/litWithoutShadowDom';
 import CloseBtnInitiator from '../../../utils/close-btn-initiator';
 
 class ModalDrinkMenu extends LitWithoutShadowDom {

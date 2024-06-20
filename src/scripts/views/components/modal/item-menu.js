@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import LitWithoutShadowDom from '../base/LitWithoutShadowDom';
+import LitWithoutShadowDom from '../base/litWithoutShadowDom';
 
 class ItemMenu extends LitWithoutShadowDom {
   constructor() {
