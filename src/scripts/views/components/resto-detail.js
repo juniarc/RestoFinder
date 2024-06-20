@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import CONFIG from '../../globals/config';
-import LitWithoutShadowDom from './base/litWithoutShadowDom.js';
+import LitWithoutShadowDom from './base/litWithoutShadowDOM.js';
 import FavBtnInitiator from '../../utils/fav-btn-initiator';
 
 class RestoDetail extends LitWithoutShadowDom {

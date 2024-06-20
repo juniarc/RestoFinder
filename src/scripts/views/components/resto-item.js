@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { html } from 'lit';
-import LitWithoutShadowDom from './base/litWithoutShadowDom';
+import LitWithoutShadowDom from './base/litWithoutShadowDOM';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import CONFIG from '../../globals/config';

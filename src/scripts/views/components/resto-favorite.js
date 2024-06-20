@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import LitWithoutShadowDom from './base/litWithoutShadowDom';
+import LitWithoutShadowDom from './base/litWithoutShadowDOM';
 import ListItemInitiator from '../../utils/list-item-initiator';
 
 class RestoFavorite extends LitWithoutShadowDom {
