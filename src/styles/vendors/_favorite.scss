@@ -1,0 +1,272 @@
+#favoriteContainer {
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .loader::after {
+        content: "";
+        border: 5px solid #dddddd;
+        border-top-color: black;
+        animation: loading 0.75s ease infinite;
+    }
+
+    .no-data-content {
+        display: none;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .no-data-content.open{
+        display: block;
+    }
+
+    .navigation-container {
+
+        display: flex;
+        align-items: center;
+    
+        .back-to-home {
+            display: flex;
+            align-items: center;
+            min-width: 44px;
+            min-height: 44px;
+            text-decoration: none;
+            cursor: pointer;
+    
+            .bi-arrow-left-short {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                color: #A94438;
+            }
+        }
+    
+        .navigation-text {
+            margin: 0;
+            color: #A94438;
+            font-weight: 600;
+        }
+    }
+    .main-content {
+        display: grid;
+        gap: 10px;
+
+        margin-top: 30px;
+
+        .loader {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .loader.hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+        
+            .loader::after {
+                content: "";
+                border: 5px solid #dddddd;
+                border-top-color: black;
+                animation: loading 0.75s ease infinite;
+            }
+        .item-container {
+            min-width: 100%;
+            height: fit-content;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 4px 4px 0 rgba($color: black, $alpha: 0.15);
+
+            overflow: visible;
+            .detail-btn {
+                min-width: 44px;
+                min-height: 44px;
+                position: fixed;
+                right: -100%;
+            }
+            img {
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+
+                object-fit: cover;
+                object-position: center center;
+            }
+            .item-information {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: 3px;
+                p {
+                    margin: 0;
+                }
+                .item-title {
+                    max-width: 100%;
+                    word-break: keep-all;
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: #000000;
+                }
+                .item-title:hover {
+                    text-decoration: underline;
+                }
+                .rating-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    .bi-star-fill {
+                        font-size: 0.625rem;
+                        color: #F0B139;
+                    }
+                    p {
+                        font-size: 0.625rem;
+                    }
+                }
+                .location-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    .bi-geo-alt-fill {
+                        font-size: 0.625rem;
+                        color: #D24545;
+                    }
+                    p {
+                        font-size: 0.625rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 843px) {
+    #favoriteContainer {
+        padding: 20px;
+        .loader {
+            margin-top: 20px;
+        }
+        .loader::after{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border-width: 1px;
+        }
+
+        .no-data-content{
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        .navigation-container {
+            column-gap: 10px;
+    
+            .back-to-home {
+                .bi-arrow-left-short {
+                    font-size: 2rem;
+                }
+            }
+
+            .navigation-text {
+                font-size: 1.25rem;
+            }
+        }
+        .main-content {
+            grid-template-columns: repeat(2,1fr);
+
+            .item-container {
+                img {
+                    height: 119px;
+                }
+                .item-information {
+                    padding: 10px;
+                    .item-title {
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 843px) {
+    #favoriteContainer{
+        padding: 20px 40px;
+        .loader {
+            margin-top: 20px;
+        }
+        .loader::after{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border-width: 1px;
+        }
+        .no-data-content{
+            margin-top: 40px;
+            font-size: 1.25rem;
+        }
+        .navigation-container {
+            top: 40px;
+            left: 40px;
+            column-gap: 10px;
+    
+            .bi-arrow-left-short {
+                font-size: 2.6rem;
+            }
+    
+            .navigation-text {
+                font-size: 1.5rem;
+            }
+        }
+        .main-content {
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            .item-container {
+                img {
+                    height: 300px;
+                }
+                .item-information {
+                    padding: 10px 20px;
+                    .item-title {
+                        font-size: 1rem;
+                    }
+                    .rating-container {
+                        .bi-star-fill {
+                            font-size: 0.75rem;
+                        }
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                    .location-container {
+                        .bi-geo-alt-fill {
+                            font-size: 0.75rem;
+                        }
+                        p {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+}

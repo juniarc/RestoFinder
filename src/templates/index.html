@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RestoFinder Website to complete Expert Front-End Dicoding Submission">
+  <meta name="theme-color" content="#A94438"/>
+
+  <link rel="icon" href="./favicon.png">
+  <link rel="manifest" href="./app.webmanifest">
+
+  <title>
+    RestoFinder
+  </title>
+</head>
+
+<body>
+  <div class="skip-to-content">
+    <a href="#mainContent" class="skip-to-content">Skip to Resto List</a>
+  </div>
+  <header>
+    <a href="/">
+      <h1>RestoFinder</h1>
+    </a>
+    <div class="nav-right-section">
+      <button class="search-icon" aria-label="search menu button"><i class="bi bi-search"></i></button>
+      <button class="burger-menu" aria-label="navigation menu button"><i class="bi bi-list"></i></button>
+      <nav class="drawer">
+        <button class="close-btn"><i class="bi bi-x"></i></button>
+        <ul>
+          <li class="home-container">
+            <i class="bi bi-house"></i>
+            <a href="#/home">Home</a>
+          </li>
+          <li class="favorite-container">
+            <i class="bi bi-heart"></i>
+            <a href="#/favorites">Favorite</a>
+          </li>
+          <li class="aboutUs-container">
+            <i class="bi bi-people"></i>
+            <a href="https://github.com/juniarc" target="_blank" rel="noopener">About Us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-menu">
+        <form class="search-form" role="search" id="searchForm">
+          <input type="search" id="searchInput" aria-label="Search Resto" placeholder="Search Resto">
+          <button type="submit" id="btnSearch" aria-label="Find resto">Find&nbsp;Resto</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main class="main-content" id="mainContent" tabindex="-1"></main>
+  <footer>
+    <p class="footer-text" tabindex="0">Copyright © 2024. Juniarc_</p>
+  </footer>
+</body>
+
+</html>

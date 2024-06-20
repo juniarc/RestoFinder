@@ -1,0 +1,1457 @@
+
+
+.img-section {
+    position: relative;
+
+    .gradient-color {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    }
+
+    .navigation-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+
+        .back-to-home {
+            display: flex;
+            align-items: center;
+            min-width: 50px;
+            min-height: 50px;
+            text-decoration: none;
+            cursor: pointer;
+
+            .bi-arrow-left-short {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                color: white;
+            }
+        }
+
+        .navigation-text {
+            margin: 0;
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+
+        z-index: -1;
+    }
+
+}
+
+.favorite-button-container {
+    position: absolute;
+
+    background-color: #D24545;
+    width: fit-content;
+    height: fit-content;
+
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .favorite {
+        min-width: 44px;
+        min-height: 44px;
+        border: none;
+        background-color: transparent;
+        vertical-align: middle;
+        cursor: pointer;
+
+        .bi-heart {
+            color: white;
+        }
+
+        .bi-heart-fill {
+            color: white;
+        }
+    }
+}
+
+.favorite-button-container:hover {
+    background-color: #A94438;
+}
+
+#detailContainer {
+    .loader {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .loader::after {
+        content: "";
+        border: 5px solid #dddddd;
+        border-top-color: black;
+        animation: loading 0.75s ease infinite;
+    }
+
+}
+
+.detail-section {
+    .detail-title {
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .detail-category-container {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0;
+            color: #A0A0A0;
+        }
+    }
+
+    .detail-location-container {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0;
+        }
+
+        .bi-geo-alt-fill {
+            color: #D24545;
+        }
+    }
+
+    .detail-description-container {
+        .description {
+            margin: 0;
+            color: #A0A0A0;
+        }
+
+        .detail-description {
+            margin: 0;
+            line-height: 1.5;
+            text-align: justify;
+        }
+    }
+
+    .detail-menu-container {
+        width: 100%;
+
+        .menu-text {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .detail-menu-content-container {
+            display: flex;
+            align-items: center;
+
+            .food-container {
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                background-color: #F0B139;
+                border-radius: 10px;
+
+                button {
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    display: flex;
+                    align-items: end;
+                    justify-content: end;
+
+                    font-weight: 800;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    cursor: pointer;
+
+                }
+            }
+
+            .food-container:hover {
+                background-color: #e6a52c;
+            }
+
+            .drink-container {
+                display: flex;
+                justify-content: end;
+                align-items: end;
+                background-color: #3998F0;
+                border-radius: 10px;
+
+                button {
+                    padding: 0;
+                    border: none;
+                    background-color: transparent;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    display: flex;
+                    align-items: end;
+                    justify-content: end;
+
+                    font-weight: 800;
+                    color: white;
+                    cursor: pointer;
+
+                }
+            }
+
+            .drink-container:hover {
+                background-color: #2985dc;
+            }
+        }
+
+    }
+
+    .detail-reviews-container {
+        .detail-reviews-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .detail-reviews-header-left {
+                display: flex;
+                align-items: center;
+
+                .reviews-text {
+                    margin: 0;
+                    font-weight: 600;
+                }
+
+                .reviews-rating-container {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        margin: 0;
+                    }
+
+                    .bi-star-fill {
+                        color: #F0B139;
+                    }
+
+                }
+            }
+
+            .detail-reviews-header-right {
+                .add-review-button {
+                    background-color: #D24545;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    text-align: center;
+                    min-width: 44px;
+                    min-height: 44px;
+                    padding: 0;
+
+                    cursor: pointer;
+
+                    .bi-plus {
+                        color: white;
+                    }
+
+                    .add-review-text {
+                        color: white;
+                        margin: 0;
+                        font-weight: 600;
+                    }
+                }
+
+                .add-review-button:hover {
+                    background-color: #A94438;
+                }
+            }
+        }
+
+
+        .detail-reviews-body {
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            background-color: #D24545;
+            border-radius: 10px;
+
+            max-width: 100%;
+
+            button {
+                padding: 0;
+                border: none;
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: end;
+                justify-content: end;
+                margin: 0;
+                color: white;
+                font-weight: 800;
+                cursor: pointer;
+
+            }
+
+        }
+
+        .detail-reviews-body:hover {
+            background-color: #A94438;
+        }
+    }
+}
+
+.modal-foods {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 99;
+
+    .modal-content {
+        background-color: #F0B139;
+
+        border-radius: 10px;
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .modal-title {
+                margin: 0;
+                font-weight: 600;
+                color: white;
+            }
+
+            .modal-close {
+                border: none;
+                background-color: transparent;
+
+                min-width: 44px;
+                min-height: 44px;
+
+                color: white;
+
+                padding: 0;
+
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0;
+
+            overflow: scroll;
+
+            .item-name-container {
+                background-color: white;
+                border-radius: 5px;
+
+                .item-name {
+                    margin: 0;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .modal-body::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.modal-drinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 99;
+
+    .modal-content {
+        background-color: #3998F0;
+
+        border-radius: 10px;
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .modal-title {
+                margin: 0;
+                font-weight: 600;
+                color: white;
+            }
+
+            .modal-close {
+                border: none;
+                background-color: transparent;
+
+                min-width: 44px;
+                min-height: 44px;
+
+                color: white;
+
+                padding: 0;
+
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0;
+
+            overflow: scroll;
+
+            .item-name-container {
+                background-color: white;
+                border-radius: 5px;
+
+                .item-name {
+                    margin: 0;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .modal-body::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.modal-reviews {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 99;
+
+    .modal-content {
+        background-color: #D24545;
+
+        border-radius: 10px;
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .modal-title {
+                margin: 0;
+                font-weight: 600;
+                color: white;
+            }
+
+            .modal-close {
+                border: none;
+                background-color: transparent;
+
+                min-width: 44px;
+                min-height: 44px;
+
+                color: white;
+
+                padding: 0;
+
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0;
+
+            overflow: scroll;
+
+            .review-name-container {
+                background-color: white;
+                border-radius: 5px;
+
+                .review-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .reviewer-name {
+                        font-weight: 600;
+                        margin: 0;
+                    }
+
+                    .review-date {
+                        margin: 0;
+                        font-style: italic;
+                    }
+                }
+
+                .review-body {
+                    .review-information {
+                        margin: 0;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+        .modal-body::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.modal-add-review {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    z-index: 99;
+
+    .modal-content-add-review {
+
+        background-color: #D24545;
+        border-radius: 10px;
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .modal-title {
+                margin: 0;
+                font-weight: 600;
+                color: white;
+            }
+
+            .modal-close {
+                border: none;
+                background-color: transparent;
+
+                min-width: 44px;
+                min-height: 44px;
+
+                color: white;
+
+                padding: 0;
+
+                cursor: pointer;
+            }
+        }
+
+        .modal-body-review {
+
+            width: 100%;
+
+            .form-review {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .input-name-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        color: white;
+                        font-weight: 500;
+                    }
+
+                    #inputName {
+                        font-family: 'Roboto', sans-serif;
+                        width: 100%;
+                        border-radius: 3px;
+                        border: none;
+                        min-width: 44px;
+                        min-height: 44px;
+                    }
+                }
+
+                .input-review-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        color: white;
+                        font-weight: 500;
+                    }
+
+                    #inputReview {
+                        font-family: 'Roboto', sans-serif;
+                        border: none;
+                        border-radius: 3px;
+                        width: 100%;
+                    }
+                }
+
+                #submitReview {
+                    background-color: white;
+                    border: none;
+                    text-decoration: none;
+                    border-radius: 3px;
+                    font-weight: 600;
+                    min-width: 44px;
+                    min-height: 44px;
+
+                    cursor: pointer;
+                }
+
+                #submitReview:hover {
+                    border: 1px solid white;
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 843px) {
+    main {
+        .img-section {
+            .gradient-color {
+                min-height: 100px;
+            }
+
+            .navigation-container {
+                margin-top: 10px;
+                margin-left: 20px;
+                column-gap: 10px;
+
+                .back-to-home {
+                    .bi-arrow-left-short {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            img {
+                max-height: 223px;
+            }
+        }
+
+        .favorite-button-container {
+            bottom: -8%;
+            right: 40px;
+
+            .favorite {
+                .bi-heart {
+                    font-size: 1.25rem;
+                }
+
+                .bi-heart-fill {
+                    height: 20px;
+                    font-size: 1.25rem;
+                }
+            }
+
+        }
+
+        #detailContainer {
+            .loader {
+                margin-top: 20px;
+            }
+            .loader::after{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border-width: 1px;
+            }
+        }
+
+        .detail-section {
+            padding: 25px 40px;
+
+            .detail-title {
+                margin-bottom: 10px;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .detail-category-container {
+                margin-bottom: 10px;
+
+                p {
+                    font-size: 0.625rem;
+                }
+            }
+
+            .detail-location-container {
+                margin-bottom: 16px;
+                column-gap: 6px;
+
+                .bi-geo-alt-fill {
+                    font-size: 0.75rem;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+
+            .detail-description-container {
+                .description {
+                    font-size: 0.75rem;
+                    margin-bottom: 10px;
+                }
+
+                .detail-description {
+                    font-size: 0.625rem;
+                }
+            }
+
+            .detail-menu-container {
+                margin-top: 16px;
+
+                .menu-text {
+                    margin-bottom: 10px;
+                    font-size: 1rem;
+                }
+
+                .detail-menu-content-container {
+                    column-gap: 10px;
+
+                    .food-container {
+                        padding: 10px 15px;
+                        height: 79px;
+                        width: 96px;
+
+                        button {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .drink-container {
+                        padding: 10px 15px;
+                        height: 79px;
+                        width: 96px;
+
+                        button {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .detail-reviews-container {
+                margin-top: 16px;
+
+                .detail-reviews-header {
+                    margin-bottom: 10px;
+                    column-gap: 24px;
+
+                    .detail-reviews-header-left {
+                        column-gap: 10px;
+
+                        .reviews-text {
+                            font-size: 1rem;
+                        }
+
+                        .reviews-rating-container {
+                            font-size: 0.625rem;
+
+                            .reviews-rating-text {
+                                margin-right: 5px;
+                            }
+
+                            .bi-star-fill {
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+
+                    .detail-reviews-header-right {
+                        .add-review-button {
+                            column-gap: 5px;
+                            padding: 5px 10px;
+
+                            .bi-plus {
+                                font-size: 1rem;
+                            }
+
+                            .add-review-text {
+                                font-size: 0.625rem;
+                            }
+                        }
+                    }
+                }
+
+                .detail-reviews-body {
+                    padding: 10px 15px;
+                    height: 84px;
+                    
+                    button {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-foods {
+        .modal-content {
+            padding: 10px 20px;
+            width: 270px;
+            height: 477px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 16px;
+
+                .modal-title {
+                    font-size: 1.25rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .modal-body {
+                max-height: 400px;
+                row-gap: 12px;
+
+                .item-name-container {
+                    padding: 10px;
+
+                    .item-name {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-drinks {
+        .modal-content {
+            padding: 10px 20px;
+            width: 270px;
+            height: 477px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 16px;
+
+                .modal-title {
+                    font-size: 1.25rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .modal-body {
+                max-height: 400px;
+                row-gap: 12px;
+
+                .item-name-container {
+                    padding: 10px;
+
+                    .item-name {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-reviews {
+        .modal-content {
+            padding: 10px 20px;
+            width: 270px;
+            height: 477px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 16px;
+
+                .modal-title {
+                    font-size: 1.25rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .modal-body {
+                max-height: 400px;
+                row-gap: 12px;
+
+                .review-name-container {
+                    padding: 10px;
+
+                    .review-header {
+                        margin-bottom: 10px;
+
+                        .reviewer-name {
+                            font-size: 0.75rem;
+                        }
+
+                        .review-date {
+                            font-size: 0.75rem;
+                            color: #A0A0A0;
+                        }
+                    }
+
+                    .review-body {
+                        .review-information {
+                            font-size: 0.75rem;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .modal-add-review {
+        .modal-content-add-review {
+            width: 250px;
+            height: 320px;
+            padding: 10px 20px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 16px;
+
+                .modal-title {
+                    font-size: 1.25rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .modal-body-review {
+                .form-review {
+                    .input-name-container {
+                        width: 100%;
+                        row-gap: 5px;
+                        margin-bottom: 10px;
+
+                        label {
+                            font-size: 0.8rem;
+                        }
+
+                        #inputName {
+                            height: 25px;
+                            font-size: 0.8rem;
+                        }
+                    }
+
+                    .input-review-container {
+                        row-gap: 5px;
+                        margin-bottom: 10px;
+
+                        label {
+                            font-size: 0.8rem;
+                        }
+
+                        #inputReview {
+                            font-size: 0.8rem;
+                            height: 100px;
+                        }
+                    }
+
+                    #submitReview {
+                        padding: 5px 20px;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 843px) {
+    main {
+        .img-section {
+            .gradient-color {
+                min-height: 175px;
+            }
+
+            .navigation-container {
+                top: 40px;
+                left: 40px;
+                column-gap: 10px;
+
+                .bi-arrow-left-short {
+                    font-size: 2.6rem;
+                }
+
+                .navigation-text {
+                    font-size: 1.5rem;
+                }
+            }
+
+            img {
+                max-height: 471px;
+            }
+        }
+
+        .favorite-button-container {
+            bottom: -8%;
+            right: 60px;
+            min-width: 85px;
+            min-height: 85px;
+
+            .bi-heart {
+                height: 32px;
+                font-size: 2rem;
+            }
+
+            .bi-heart-fill {
+                height: 32px;
+                font-size: 2rem;
+            }
+        }
+
+        #detailContainer {
+            .loader::after{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border-width: 3px;
+            }
+        }
+
+        .detail-section {
+            padding: 42px 60px;
+
+            .detail-title {
+                margin-bottom: 20px;
+                font-size: 2rem;
+
+            }
+
+            .detail-category-container {
+                margin-bottom: 20px;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+
+            .detail-location-container {
+                margin-bottom: 36px;
+                column-gap: 6px;
+
+                .bi-geo-alt-fill {
+                    font-size: 1.25rem;
+                }
+
+                p {
+                    font-size: 1.25rem;
+                }
+            }
+
+            .detail-description-container {
+                .description {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+
+                .detail-description {
+                    font-size: 1rem;
+                }
+            }
+
+            .detail-menu-container {
+                margin-top: 36px;
+
+                .menu-text {
+                    margin-bottom: 20px;
+                    font-size: 2rem;
+                }
+
+                .detail-menu-content-container {
+                    column-gap: 20px;
+
+                    .food-container {
+                        padding: 20px 35px;
+                        height: 166px;
+                        width: 202px;
+
+                        button {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    .drink-container {
+                        padding: 20px 35px;
+                        height: 166px;
+                        width: 202px;
+
+                        button {
+                            
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+
+            .detail-reviews-container {
+                margin-top: 36px;
+
+                .detail-reviews-header {
+                    margin-bottom: 20px;
+                    column-gap: 24px;
+
+                    .detail-reviews-header-left {
+                        column-gap: 20px;
+
+                        .reviews-text {
+                            font-size: 2rem;
+                        }
+
+                        .reviews-rating-container {
+                            font-size: 1rem;
+
+                            .reviews-rating-text {
+                                margin-right: 10px;
+                            }
+
+                            .bi-star-fill {
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+
+                    .detail-reviews-header-right {
+                        .add-review-button {
+                            column-gap: 5px;
+                            padding: 10px;
+
+                            .bi-plus {
+                                font-size: 2rem;
+                            }
+
+                            .add-review-text {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                .detail-reviews-body {
+                    padding: 20px 35px;
+                    height: 177px;
+
+                    button {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-foods {
+        .modal-content {
+            padding: 20px 30px;
+            width: 430px;
+            height: 600px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 30px;
+
+                .modal-title {
+                    font-size: 2rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .modal-body {
+                max-height: 520px;
+                row-gap: 12px;
+
+                .item-name-container {
+                    padding: 10px;
+
+                    .item-name {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-drinks {
+        .modal-content {
+            padding: 20px 30px;
+            width: 430px;
+            height: 600px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 30px;
+
+                .modal-title {
+                    font-size: 2rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .modal-body {
+                max-height: 520px;
+                row-gap: 12px;
+
+                .item-name-container {
+                    padding: 10px;
+
+                    .item-name {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-reviews {
+        .modal-content {
+            padding: 20px 30px;
+            width: 430px;
+            height: 600px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 30px;
+
+                .modal-title {
+                    font-size: 2rem;
+                    width: 100%;
+                }
+
+                .modal-close {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .modal-body {
+                max-height: 520px;
+                row-gap: 12px;
+
+                .review-name-container {
+                    padding: 20px;
+
+                    .review-header {
+                        margin-bottom: 15px;
+
+                        .reviewer-name {
+                            font-size: 1.25rem;
+                        }
+
+                        .review-date {
+                            font-size: 1rem;
+                            color: #A0A0A0;
+                        }
+                    }
+
+                    .review-body {
+                        .review-information {
+                            font-size: 1rem;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .modal-add-review {
+        .modal-content-add-review {
+            width: 350px;
+            height: 440px;
+            padding: 10px 20px;
+            border: 2px solid white;
+
+            .modal-header {
+                margin-bottom: 16px;
+
+                .modal-title {
+                    font-size: 2rem;
+                }
+
+                .modal-close {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .modal-body-review {
+                .form-review {
+                    .input-name-container {
+                        width: 100%;
+                        row-gap: 5px;
+                        margin-bottom: 10px;
+
+                        label {
+                            font-size: 1rem;
+                        }
+
+                        #inputName {
+                            height: 30px;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .input-review-container {
+                        row-gap: 5px;
+                        margin-bottom: 20px;
+
+                        label {
+                            font-size: 1rem;
+                        }
+
+                        #inputReview {
+                            font-size: 1rem;
+                            height: 200px;
+                        }
+                    }
+
+                    #submitReview {
+                        padding: 5px 20px;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main {
+        .img-section {
+            img {
+                max-height: 600px;
+            }
+        }
+
+        .favorite-button-container {
+            bottom: -6%;
+        }
+    }
+
+    .modal-foods {
+        .modal-content {
+            width: 1000px;
+            height: 500px;
+
+            .modal-body {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-height: 410px;
+            }
+        }
+    }
+
+    .modal-drinks {
+        .modal-content {
+            width: 1000px;
+            height: 500px;
+
+            .modal-body {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-height: 410px;
+            }
+        }
+    }
+
+    .modal-reviews {
+        .modal-content {
+            width: 1000px;
+            height: 500px;
+
+            .modal-body {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                max-height: 410px;
+            }
+        }
+    }
+}
